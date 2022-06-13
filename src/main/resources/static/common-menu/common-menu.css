@@ -78,40 +78,100 @@ body {
   z-index: 1;
 }
 
-.menu_btn {
-  height: inherit;
-  border: none;
-  background-color: var(--secondaryColor);
+.left_menu_btn {
+  height: 60px;
+}
+
+#menuicon {
+  display: none;
+}
+
+#menuicon + label {
+  display: block;
+  width: 27px;
+  height: 18px;
+  position: relative;
   cursor: pointer;
+  top: 20px;
+  left: 15px;
+}
+
+#menuicon + label span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 30px;
+  background: var(--txtBtnColor);
+  transition: all .35s;
+}
+
+#menuicon + label span:nth-child(1) {
+  top: 0;
+}
+
+#menuicon + label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#menuicon + label span:nth-child(3) {
+  bottom: 0;
+}
+
+#menuicon:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+#menuicon:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+
+#menuicon:checked + label span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
 }
 
 .m_box {
   display: flex;
-  height: 60px;
+  flex-direction: row;
   align-items: center;
-  border-width: 15px;
+  height: 60px;
 }
 
 .menu_btn_box {
   width: 60px;
   text-align: center;
   color: var(--txtBtnColor);
-  position: relative;
+  align-items: center;
 }
 
-.menu_btn_box:after {
-  content: '';
-  position: absolute;
-}
-
-/* 메뉴 클릭 했을때 */
-.clickdBtn {
-  margin-left: 130px;
-}
-
-.menu_name {
-  width: 100px;
-  font-size: 12px;
+.mbox_btn_box {
+  width: 60px;
+  text-align: center;
   color: var(--txtBtnColor);
-  padding-left: 20px;
+  align-items: center;
+}
+
+/* 아이콘 호버 */
+i:hover:nth-child(1) {
+  transform: scale(1.1);
+}
+
+.menu_none {
+  display: none;
+}
+
+.menu_show {
+  display: inline-block;
+  width: 130px;
+  padding-left: 16px;
+  border-left: 1px solid var(--txtBtnColor);
+  font-size: 16px;
+  color: var(--txtBtnColor);
+}
+
+.clickBtn {
+  margin-left: 150px;
 }

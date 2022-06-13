@@ -25,32 +25,39 @@
       </div>
     </div>
     <div class="left_menu">
-      <div class="m_box m_container">
-        <button class="menu_btn_box menu_btn" aria-label="메뉴">
-          <i class="fa-solid fa-bars fa-lg"></i>
-        </button>
-        <div class="menu_name"></div>
+      <div class="left_menu_btn">
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon" class="menuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </div>
       <nav class="m_container">
-        <a href="#" class="m_box">
-          <div class="menu_btn_box MenuBackG">
-            <i class="fa-solid fa-photo-film fa-lg"></i>
-          </div>
-          <div class="menu_name">My Album</div>
-        </a>
-        <a href="#" class="m_box">
-          <div class="menu_btn_box">
-            <i class="fa-solid fa-square-share-nodes fa-lg"></i>
-          </div>
-          <div class="menu_name">Show Feed</div>
-        </a>
-        <a href="#" class="m_box">
-          <div class="menu_btn_box">
-            <i class="fa-solid fa-map-location-dot fa-lg"></i>
-          </div>
-          <div class="menu_name">Show Maps</div>
-        </a>
-      </nav>
+        <div class="m_box">
+          <a href="#" class="m_box">
+            <div class="mbox_btn_box">
+              <i class="fa-solid fa-photo-film fa-lg"></i>
+            </div>
+            <section class="menu_none">My Album</section>
+          </a>
+        </div>
+        <div>
+          <a href="#" class="m_box">
+            <div class="mbox_btn_box">
+              <i class="fa-solid fa-square-share-nodes fa-lg"></i>
+            </div>
+            <section class="menu_none">Show Feed</section>
+          </a>
+        </div>
+        <div>
+          <a href="#" class="m_box">
+            <div class="mbox_btn_box">
+              <i class="fa-solid fa-map-location-dot fa-lg"></i>
+            </div>
+            <section class="menu_none">Show Maps</section>
+          </a>
+        </div>
       </nav>
     </div>
     <script src="../static/common-menu/common-menu.js"></script>
